@@ -109,7 +109,7 @@ What makes this dashboard special is how it brings complex data to life in a way
    ```bash
    npm run dev
    ```
-9. Open the application in your browser at `http://localhost:8081`.
+9. Open the application in your browser at `http://localhost:8080`.
 
 **NOTE:**
 
