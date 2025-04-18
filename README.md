@@ -51,53 +51,71 @@ What makes this dashboard special is how it brings complex data to life in a way
 ## Local Development Setup
 
 ### Prerequisites
-- Node.js and npm installed
+- Node.js installed
 - Python 3.13 installed
-- PostgreSQL installed
 
 ### Steps
 
+#### Clone the Repository
+1. Run the following command to clone the repository:
+
+   ```bash
+   git clone https://github.com/claguduv/Enkoat-Quote-Dashboard.git
+   ```
 #### Backend
-1. Navigate to the `backend` directory:
+- Open new terminal and run the following commands 
+
+2. Navigate to the `backend` directory:
    ```bash
    cd backend
    ```
-2. Create a virtual environment and activate it:
+   - Terminal should look like ""../enkoat-quote-dashboard/backend"
+
+3. Create a virtual environment and activate it:
    ```bash
    python -m venv enkoatenv
-   source enkoatenv/bin/activate  # On Windows: enkoatenv\Scripts\activate
    ```
-3. Install dependencies:
+   ```bash
+   enkoattestenv\Scripts\activate.bat  # On Windows command prompt
+
+   .\enkoatenv\Scripts\Activate.ps1    # On Windows powershell
+
+   source enkoatenv/bin/activate # On macOS/ Linux
+   ```
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-4. Run migrations:
-   ```bash
-   python manage.py migrate
-   ```
-5. Populate the database with mock data (optional):
-   ```bash
-   python mock_data/generate_mock_data.py
-   ```
-6. Start the development server:
+
+5. Start the development server:
    ```bash
    python manage.py runserver
    ```
 
 #### Frontend
-1. Navigate to the `frontend` directory:
+- Open new terminal and run the following commands 
+
+6. Navigate to the `frontend` directory:
    ```bash
    cd frontend
    ```
-2. Install dependencies:
+   - Terminal should look like ""../enkoat-quote-dashboard/frontend"
+
+7. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the development server:
+8. Start the development server:
    ```bash
    npm run dev
    ```
-4. Open the application in your browser at `http://localhost:5173`.
+9. Open the application in your browser at `http://localhost:8081`.
+
+**NOTE:**
+
+**- In Quote form if the data is not submitted the first time - refresh the page once as the database is connected to my local postgres.**
+
+**- In Dashboard if the heatmap is not visible over the map - refresh the page once as the google heatmap api is called over the map.**
 
 ## Mock Data Implementation
 
@@ -116,7 +134,10 @@ The project includes a sophisticated mock data generation system implemented usi
 - **Energy Efficiency Data**: Calculated savings based on roof types
 
 ### Usage
-The mock data system is implemented in `mock_data/generate_mock_data.py` and can be easily customized for different testing scenarios or data volumes.
+- The mock data system is implemented in `mock_data/generate_mock_data.py`.
+- The mock_quotes.csv is the data generated
+![alt text](images/imagemock.png)
+
 
 ## Future Enhancements
 
