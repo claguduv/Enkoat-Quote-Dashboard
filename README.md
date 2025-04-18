@@ -76,7 +76,7 @@ What makes this dashboard special is how it brings complex data to life in a way
    python -m venv enkoatenv
    ```
    ```bash
-   enkoattestenv\Scripts\activate.bat  # On Windows command prompt
+   enkoatenv\Scripts\activate.bat  # On Windows command prompt
 
    .\enkoatenv\Scripts\Activate.ps1    # On Windows powershell
 
