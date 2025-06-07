@@ -37,7 +37,7 @@ export const Dashboard = () => {
   // const [heatmapData, setHeatmapData] = useState([]);
   const [heatmapData, setHeatmapData] = useState<google.maps.MVCArray<google.maps.visualization.WeightedLocation> | null>(null);
   const { isLoaded } = useJsApiLoader({
-  googleMapsApiKey: "AIzaSyCli6Fsd1KH-fKhQZQ-RH6FDZSBsAlMgMY", // Replace this with your key
+  googleMapsApiKey: "", // Replace this with your key
   libraries: ["visualization"],
 });
   const [selectedCityForInsight, setSelectedCityForInsight] = useState("");
